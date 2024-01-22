@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Little Lemon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Our Menu">
+  <meta property="og:type"  content="website">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url"   content="https://littlelemon/">
+  <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Little Lemon">
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./logo.png" alt="logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./menu.html">Menu</a></li>
+        <li><a href="./booking.html">Book</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="grid-container">
+    <form class="booking-form">
+    <h1>Book a Table</h1>
+    <div><label for="name">Name: </label><input type="name" id="name" name="name" required minlength="3"></div>
+    <div><label for="email">Email: </label><input type="email" id="email" name="email" required minlength=""></div>
+    <div><label for="booking_date">Date of Booking: </label><input type="date" id="booking_date" name="booking_date" required></div>
+    <div><label for="time">Time: </label><input type="time" id="time" name="time" min="10:30" max="23:30" step="1800" required></div>
+    <script>
+      const bookingTimeSelect = document.getElementById("booking-time");
+
+        const startTime = "10:30"; // 10:30 AM
+        const endTime = "23:30"; // 11:30 PM
+        const timeInterval = 30 * 60; // 30 minutes in seconds
+
+        // Generate time options
+        const timeOptions = [];
+        let currentTime = startTime;
+        while (currentTime <= endTime) {
+          timeOptions.push(currentTime);
+          currentTime = new Date(currentTime);
+          currentTime.setMinutes(currentTime.getMinutes() + timeInterval);
+          currentTime = currentTime.toTimeString().slice(0, 5); // Format time
+        }
+
+        // Add options to select element
+        timeOptions.forEach(time => {
+          const option = document.createElement("option");
+          option.value = time;
+          option.text = time;
+          bookingTimeSelect.appendChild(option);
+        });
+    </script>
+    <div><label for="number_guests">Number of guests: </label><input title="number_guests" type="number" id="booking_guests" min="1" max="8" required></div>
+    <div><label for="location">Location:</label>
+      <input title="location" id="locatoion" name="booking-location" list="locatoions" required>
+      <datalist id="locatoions">
+        <option value="Downtown"></option>
+        <option value="Uptown"></option>
+        <option value="Westside"></option>
+      </datalist>
+    </div>
+    <div>
+      <label for="agree">
+        <input type="checkbox" id="agree" name="agree" title="checkbox" required>
+        I agree to the cancellation policy
+      </label>
+    </div>
+    
+    <button type="submit">Book now</button>
+  </form>
+</main>
+</body>
+
+</html>

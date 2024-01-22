@@ -1,0 +1,297 @@
+/* General styling */
+body {
+    background-color: #edefee;
+    font-family: 'Markazi Text' sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Header, footer, and navigation */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f0f0f0; /* Adjust as needed */
+}
+
+.logo img {
+    display: block !important;
+    width: 250px !important;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  
+}
+    
+    nav {
+    background-color: #2E1710; /* Dark brown background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+    nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    }
+    
+    nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+    nav a:hover {
+    text-decoration: underline;
+    color: #4CAF50; /* Adjust as needed */
+}
+
+    nav li {
+    display: inline-block;
+    margin-right: 1rem;
+    }
+
+    nav li:hover {
+        background-color: #f0f0f0; /* Adjust as needed */
+    }
+
+      /* Promotion section styling */
+.promotion {
+    flex-grow: 1fr;
+    place-items: center;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+footer {
+display: grid;
+grid-template-columns: 1fr 1fr;
+padding: 1rem;
+background-color: #f0f0f0; /* Adjust as needed */
+}
+
+  h1 {
+    font-size: 3rem;
+    color: #721817;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #721817;
+    text-align: left;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #721817;
+    text-align: left;
+  }
+
+  /* Flex layout */
+  section {
+    display: flex;
+  }
+
+  article {
+    flex: 1;
+  }
+
+  .footer .logo img {
+    width: auto;
+    height: auto;
+}
+
+  footer .copyright {
+    margin: auto;
+    align-items: flex-end;
+  }
+
+  footer div {
+    flex: 1;
+  }
+
+  .promotion {
+    position: relative;
+    
+  }
+
+  /* CSS rules for the banner image */
+.promotion img {
+    width: 100%; /* Full width */
+    height: 150px; 
+    border-radius: 10px;
+    object-fit: cover; /* Crop across the horizontal middle*/
+  }
+  
+  /* CSS rules for the overlay text */
+  .banner-overlay {
+    position: absolute;
+    display: flex;
+    top: 0%; /* Margin-top */
+    left: 5%; /* Margin-left */
+    color: white;
+    font-weight: bold;
+    font-size: 36px; /* Adjust font size as needed */
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+
+  .banner-overlay h2 {
+    margin-bottom: 5px;
+  }
+  
+  .promotional-items {
+    display: flex 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr); /* Create three columns for items */
+    grid-column-gap: 2rem;
+  }
+  
+  /* Promotional items */
+  .promotional-item {
+    flex: 1;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    font-weight: bold;
+    background-color: rgb(228, 205, 205); /* Card background color */
+    padding: 1rem;
+    border-radius: 10px; /* Card rounded corners */
+    margin-bottom: 1rem;
+  }
+
+  .promotional-item a {
+    color: #4CAF50;
+    text-decoration: underline;
+  }
+  
+  .promotional-item img {
+    width: 300px; /* Adjust as needed */
+    height: 200px;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    cursor: pointer; 
+    
+     /* Add transition for smooth effect */
+      }
+      
+      .promotional-item img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+      }
+  
+  .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+  
+  .promotional-item:hover .description {
+    overflow: visible;
+    white-space: normal;
+  }
+  
+  /* Accessibility, interactivity */
+  img {
+    alt: "Description of the image";
+
+  }
+
+/* Booking form styling */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Adjust as needed */
+  }
+  
+  .booking-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .booking-form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .booking-form input {
+    margin-right: -70px; /* Add a small margin for visual separation */
+    line-height: 1.5;
+  }
+
+  input:focus:invalid{
+    color: red;
+    border: red 3px;
+  }
+
+  .booking-form input,
+  .booking-form output {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  .booking-form button {
+    background-color: #4CAF50; /* Adjust as needed */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    place-items: center;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  /* Add media rules for container class below */
+  
+@media (min-width: 440px) {
+    .container {
+    grid-template-columns: 150px 1fr 150px; /* Step 7 */
+    grid-template-rows: auto 1fr auto; /* Step 8 */
+    grid-template-areas: 
+      "header header header"
+      "left main right"
+      "footer footer footer"; /* Step 9 */
+  }
+}
+
+/* Animation */
+/* Image pop-out effect on hover */
+/* Article image animation */
+  article img {
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+  }
+  
+  article img:hover {
+    transform: rotate(5deg); /* Rotate slightly on hover */
+  }
+  
+    
+  
+  
